@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OLTonitoYT | Official Creator Hub</title>
+  <style>
+    :root {
+      --bg-dark: #0e1018;
+      --card-bg: #171b29;
+      --accent-pink: #ff2a85;
+      --accent-lime: #a6ff00;
+      --accent-cyan: #00e5ff;
+      --text-main: #f4f6fb;
+      --text-muted: #9ba3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      line-height: 1.6;
+      background-image: radial-gradient(circle at 15% 15%, rgba(255, 42, 133, 0.14), transparent 35%),
+                        radial-gradient(circle at 85% 80%, rgba(166, 255, 0, 0.10), transparent 35%);
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem;
+    }
+
+    /* Hero Section */
+    header {
+      text-align: center;
+      padding: 3rem 1.5rem;
+      background: var(--card-bg);
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+      margin-bottom: 2rem;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(166, 255, 0, 0.15);
+      color: var(--accent-lime);
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 0.4rem;
+    }
+
+    h1 span {
+      background: linear-gradient(90deg, var(--accent-pink), var(--accent-cyan));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .handle {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .bio {
+      max-width: 620px;
+      margin: 0 auto 2rem;
+      color: #d6dbea;
+      font-size: 1.05rem;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      text-decoration: none;
+      padding: 0.85rem 1.6rem;
+      border-radius: 12px;
+      font-weight: 700;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: var(--accent-pink);
+      color: #fff;
+      box-shadow: 0 6px 20px rgba(255, 42, 133, 0.35);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--text-main);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    /* Section Headings */
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* Content Grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .card:hover {
+      border-color: var(--accent-cyan);
+      transform: translateY(-3px);
+    }
+
+    .card-icon {
+      font-size: 1.8rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* Upcoming Game Banner */
+    .game-banner {
+      background: linear-gradient(135deg, #1d2336 0%, #241934 100%);
+      border: 1px solid rgba(255, 42, 133, 0.35);
+      border-radius: 18px;
+      padding: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .game-banner h3 {
+      font-size: 1.4rem;
+      color: var(--accent-lime);
+      margin-bottom: 0.3rem;
+    }
+
+    .game-banner p {
+      color: #d6dbea;
+      max-width: 560px;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    footer a {
+      color: var(--accent-cyan);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Hero -->
+    <header>
+      <div class="badge">OFFICIAL CREATOR SITE</div>
+      <h1>Welcome to <span>OLTonitoYT</span></h1>
+      <p class="handle">@OlTonitofficial on YouTube</p>
+      <p class="bio">
+        Hey guys! Welcome to my official hub. Tune in for Splatoon animations, Splatoon 2 &amp; 3 gameplay,
+        Minecraft adventures, Animal Crossing: New Horizons, classic Wii games, and dev updates on my upcoming game!
+      </p>
+      <div class="btn-group">
+        <a class="btn btn-primary" href="https://youtube.com" target="_blank" rel="noopener">
+          ▶ Subscribe on YouTube
+        </a>
+        <a class="btn btn-secondary" href="https://youtube.com" target="_blank" rel="noopener">
+          Watch Latest Videos
+        </a>
+      </div>
+    </header>
+
+    <!-- What I Make -->
+    <h2>🎮 What You'll Find on the Channel</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="card-icon">🦑</div>
+        <h3>Splatoon &amp; Animations</h3>
+        <p>Original Splatoon animations plus Turf War and Ranked action in Splatoon 2 &amp; Splatoon 3.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">⛏️</div>
+        <h3>Minecraft</h3>
+        <p>Creative builds, survival challenges, and fun moments with friends.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🏝️</div>
+        <h3>Animal Crossing: NH</h3>
+        <p>Island tours, cozy gameplay, and chill ACNH sessions.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🕹️</div>
+        <h3>Classic Wii Games</h3>
+        <p>Throwback gameplay and nostalgia trips across favorite Nintendo Wii titles.</p>
+      </div>
+    </div>
+
+    <!-- Game Dev Highlight -->
+    <section class="game-banner">
+      <div>
+        <h3>🚀 Upcoming Game Project</h3>
+        <p>
+          I'm currently building and releasing my own game! Follow along on YouTube for sneak peeks,
+          devlogs, and release announcements.
+        </p>
+      </div>
+      <a class="btn btn-primary" href="https://www.youtube.com/@OlTonitofficial" target="_blank" rel="noopener">
+        Follow Updates
+      </a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>© <span id="year"></span> OLTonitoYT (@OlTonitofficial) • Hosted on <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a></p>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
